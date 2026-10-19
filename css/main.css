@@ -1,0 +1,109 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.gridcontainer {
+  width: 100%;
+}
+
+.gridcontainer--faded {
+  opacity: 0.1;
+}
+
+.page-overlay {
+  position: absolute;
+  opacity: 0.9;
+  width: auto;
+  left: 8px;
+  right: 10px;
+}
+
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+}
+
+.gridwrapper--header {
+  height: 90px;
+}
+
+.gridwrapper--content {
+  height: 230px;
+}
+
+.gridwrapper--footer {
+  height: 50px;
+}
+
+.gridwrapper--background {
+  height: 370px;
+}
+
+.gridcontent {
+  width: 8.33%;
+  margin: 0;
+  border-right: 1px solid grey;
+  height: 100%;
+  float: left;
+  background-color: #f1f1f1;
+}
+
+.gridcontent--header {
+  width: 100%;
+  background: #9933cc;
+  border-right-color: transparent;
+}
+
+.gridcontent--footer {
+  width: 100%;
+  background: #0099cc;
+  border-right-color: transparent;
+}
+
+.gridcontent--white {
+  background-color: #ffffff;
+  border: none;
+}
+
+.gridcontent--sidebar {
+  width: 25%;
+  padding-top: 15px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.gridcontent--outlined {
+  background: #ffffff;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+}
+
+.gridcontent--outlined-right {
+  background: #ffffff;
+  border-right: 1px solid #000000;
+}
+
+.grid-item {
+  width: 100%;
+  background: #33b5e5;
+  border: none;
+}
+
+.grid-item--spaced {
+  height: 15%;
+  margin-bottom: 10px;
+}
+
+.grid-item--last {
+  height: 15%;
+}
+
+.grid-item--tall {
+  height: 92%;
+}
+
+.description {
+  margin-top: 1em;
+}
