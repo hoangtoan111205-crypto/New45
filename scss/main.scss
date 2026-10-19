@@ -1,0 +1,136 @@
+
+$grid-green: #84c754;
+$grid-background: #f1f1f1;
+$grid-purple: #9933cc;
+$grid-blue: #33b5e5;
+$grid-footer: #0099cc;
+$white: #ffffff;
+$black: #000000;
+$border-color: grey;
+
+$grid-column-width: 8.33%;
+$sidebar-width: 25%;
+
+@mixin full-width {
+  width: 100%;
+}
+
+@mixin no-border {
+  border: none;
+}
+
+@mixin grid-panel($height: 250px) {
+  overflow: auto;
+  position: relative;
+  height: $height;
+}
+
+@mixin white-column {
+  background-color: $white;
+  border: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.gridcontainer {
+  width: 100%;
+
+  &--faded {
+    opacity: 0.1;
+  }
+}
+
+.page-overlay {
+  position: absolute;
+  opacity: 0.9;
+  width: auto;
+  left: 8px;
+  right: 10px;
+}
+
+.gridwrapper {
+  @include grid-panel;
+
+  &--header {
+    height: 90px;
+  }
+
+  &--content {
+    height: 230px;
+  }
+
+  &--footer {
+    height: 50px;
+  }
+
+  &--background {
+    height: 370px;
+  }
+}
+
+.gridcontent {
+  width: $grid-column-width;
+  margin: 0;
+  border-right: 1px solid $border-color;
+  height: 100%;
+  float: left;
+  background-color: $grid-background;
+
+  &--header {
+    @include full-width;
+    background: $grid-purple;
+    border-right-color: transparent;
+  }
+
+  &--footer {
+    @include full-width;
+    background: $grid-footer;
+    border-right-color: transparent;
+  }
+
+  &--white {
+    @include white-column;
+  }
+
+  &--sidebar {
+    width: $sidebar-width;
+    padding-top: 15px;
+    @include white-column;
+  }
+
+  &--outlined {
+    background: $white;
+    border-right: 1px solid $black;
+    border-left: 1px solid $black;
+  }
+
+  &--outlined-right {
+    background: $white;
+    border-right: 1px solid $black;
+  }
+}
+
+.grid-item {
+  @include full-width;
+  background: $grid-blue;
+  @include no-border;
+
+  &--spaced {
+    height: 15%;
+    margin-bottom: 10px;
+  }
+
+  &--last {
+    height: 15%;
+  }
+
+  &--tall {
+    height: 92%;
+  }
+}
+
+.description {
+  margin-top: 1em;
+}
